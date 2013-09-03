@@ -1,5 +1,6 @@
 # Put your email address here:
 myAddress = 'address_here@gmail.com'
+myLogin = 'address_here@gmail.com'
 
 # Put your email password here:
 pw = 'password_here'
@@ -30,6 +31,6 @@ msg['Subject'] = "The Raspberry Pi's IP is " + ipString
 # Connect to the server and send the message
 server = smtplib.SMTP(smtpServer, smtpPort)
 server.starttls()
-server.login(myAddress, pw)
+server.login(myLogin, pw)
 server.sendmail(myAddress, myAddress,msg.as_string())
 server.quit()
